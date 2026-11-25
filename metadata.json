@@ -1,0 +1,6 @@
+{
+  "name": "PostCard World",
+  "description": "Vintage Love Postcard Generator in Bangla & English. Choose a pre-designed vintage postcard, pick a romantic quote or write your own, customize typography, preview, and download in HD.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

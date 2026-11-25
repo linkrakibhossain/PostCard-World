@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #0e0b09;
+    --bg-surface: #17120e;
+    --bg-elevated: #201914;
+    --text-cream: #f5ecd8;
+    --text-muted: #b8a890;
+    --accent-gold: #c8a25a;
+    --accent-burgundy: #7c1d26;
+    --border-gold: rgba(200, 162, 90, 0.24);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-canvas);
+    color: var(--text-cream);
+    font-family: 'Hind Siliguri', 'Noto Serif Bengali', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(124, 29, 38, 0.14), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 85% 20%, rgba(200, 162, 90, 0.08), transparent 60%);
+    min-height: 100vh;
+  }
+}
+
+.font-editorial {
+  font-family: 'Noto Serif Bengali', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-ui {
+  font-family: 'Hind Siliguri', 'Noto Serif Bengali', sans-serif;
+}
+
+/* Subtle archival paper grain */
+.vintage-grain-bg {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #120e0b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 162, 90, 0.28);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 162, 90, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
